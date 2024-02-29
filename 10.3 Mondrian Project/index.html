@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .canvas{
+      display: grid;
+      width: 748px;
+      height: 748px;
+      background-color: black;
+      gap: 9px;
+      grid-template-columns: 320px 351px 50px;
+      grid-template-rows: 414px 285px 20px;
+    }
+    .partition{
+      background-color: #F0F1EC;
+    }
+    .red{
+      background-color: #E72F24;
+    }
+    .grey1{
+      grid-column: 2 / 5;
+    }
+    .blue-and-grey{
+      display: grid;
+      row-gap: 10px;
+      grid-template-rows: 131px 184px;
+      grid-column: 3 / 5;
+      grid-row: 2 / 4;
+      background-color: black;
+    }
+    .blue-and-grey > .blue{
+      background-color: #004592;
+      grid-column: 1 / 3;
+    }
+    .blue-and-grey > .grey{
+      background-color: #F0F1EC;
+      grid-column: 1 / 3;
+    }
+    .grey5{
+      grid-row: 3 / 5;
+    }
+    .yellow-and-black{
+      display: grid;
+      grid-template-rows: 20px;
+      grid-template-columns: 198px 153px;
+      background-color: black;
+      grid-row: 3 / 5;
+      column-gap: 9px;
+    }
+    .yellow-and-black > .yellow{
+      background-color: #F9D01E;
+      grid-row: 1 / 3;
+    }
+    .yellow-and-black > .black{
+      background-color: #232629;
+      grid-row: 1 / 3;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div class="canvas">
+    <div class="partition red"></div>
+    <div class="partition grey1"></div>
+    <div class="partition"></div>
+    <div class="partition"></div>
+    <div class="partition blue-and-grey">
+      <div class="blue"></div>
+      <div class="grey"></div>
+    </div>
+    <div class="partition grey5"></div>
+    <div class="partition yellow-and-black">
+      <div class="yellow"></div>
+      <div class="black"></div>
+    </div>
+  </div>
+</body>
+
+</html>
